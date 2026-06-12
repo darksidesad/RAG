@@ -4,6 +4,14 @@ Sistema RAG (Retrieval-Augmented Generation) para ingestión y búsqueda semánt
 
 ## Demo
 
+### Chat con Documentos
+
+![Chat RAG Demo](assets/chat-demo.png)
+
+*Chat conversacional respondiendo preguntas sobre el Reporte Anual de Bancolombia 2024*
+
+### Badges
+
 ![Interfaz](https://img.shields.io/badge/Interfaz-Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)
 ![Qdrant](https://img.shields.io/badge/Vector_DB-Qdrant-FF6B35?style=for-the-badge&logo=qdrant&logoColor=white)
 ![OpenRouter](https://img.shields.io/badge/LLM-OpenRouter-6366f1?style=for-the-badge)
@@ -104,6 +112,17 @@ python scripts/query.py --query "¿Cuáles fueron los ingresos?" --empresa "ACME
 pytest tests/ -v
 ```
 
+## PDF de Ejemplo
+
+Incluyo un PDF de prueba para que puedas probar el sistema sin crear tu propio documento:
+
+- **`assets/Reporte_Anual_Bancolombia_2024.pdf`** — Reporte anual real para testing
+
+```bash
+# Probar con el PDF de ejemplo
+python scripts/ingest.py --pdf assets/Reporte_Anual_Bancolombia_2024.pdf --empresa "Bancolombia" --año 2024
+```
+
 ## Estructura del Proyecto
 
 ```
@@ -111,6 +130,9 @@ mi-rag/
 ├── .env                  # Configuración (no subir a git)
 ├── .gitignore
 ├── requirements.txt
+├── assets/
+│   ├── chat-demo.png                    # Screenshot del chat
+│   └── Reporte_Anual_Bancolombia_2024.pdf  # PDF de ejemplo
 ├── scripts/
 │   ├── ingest.py         # Pipeline de ingestión
 │   ├── query.py          # Búsqueda + LLM
