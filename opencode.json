@@ -1,0 +1,36 @@
+{
+  "name": "mi-rag",
+  "version": "1.0.0",
+  "description": "Sistema RAG para documentos empresariales",
+  "agents": {
+    "architect": {
+      "file": ".opencode/agents/architect.md",
+      "description": "Diseñador técnico del sistema"
+    },
+    "developer": {
+      "file": ".opencode/agents/developer.md",
+      "description": "Desarrollador principal"
+    },
+    "devops": {
+      "file": ".opencode/agents/devops.md",
+      "description": "Infraestructura y operaciones"
+    },
+    "product-owner": {
+      "file": ".opencode/agents/product-owner.md",
+      "description": "Dueño del producto"
+    },
+    "qa": {
+      "file": ".opencode/agents/qa.md",
+      "description": "Calidad y testing"
+    }
+  },
+  "scripts": {
+    "ingest": "python scripts/ingest.py",
+    "test": "pytest tests/ -v",
+    "lint": "ruff check scripts/",
+    "format": "ruff format scripts/"
+  },
+  "env": {
+    "QDRANT_URL": "http://localhost:6333"
+  }
+}
