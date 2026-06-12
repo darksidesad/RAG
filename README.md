@@ -116,7 +116,7 @@ pytest tests/ -v
 
 Incluyo un PDF de prueba para que puedas probar el sistema sin crear tu propio documento:
 
-- **`assets/Reporte_Anual_Bancolombia_2024.pdf`** — Reporte anual real para testing
+- **[Reporte_Anual_Bancolombia_2024.pdf](assets/Reporte_Anual_Bancolombia_2024.pdf)** — Reporte anual real para testing
 
 ```bash
 # Probar con el PDF de ejemplo
