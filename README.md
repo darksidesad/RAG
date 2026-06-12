@@ -173,10 +173,3 @@ mi-rag/
 - [ ] Filtros avanzados de búsqueda
 - [ ] Exportación de resultados
 
-## Licencia
-
-MIT
-
-## Autor
-
-Desarrollado con el sistema de agentes de [opencode](https://opencode.ai)
